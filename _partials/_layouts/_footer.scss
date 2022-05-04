@@ -1,0 +1,50 @@
+footer{
+  background-color: $color-blue;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.8rem;
+  color: $color-white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  a:hover{
+    color: $color-green;
+  }
+}
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  footer{
+    padding: 1em 3em;
+  }
+}
+
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+  footer{
+    padding: 2em 9em;
+  }
+}
+
+/*
+=====================================================
+Extra Extra Large devices (desktops, 1400px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(xxl) {
+  footer{
+    padding: 2em 20em;
+  }
+}

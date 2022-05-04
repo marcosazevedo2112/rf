@@ -1,0 +1,67 @@
+html{
+  scroll-behavior: smooth;
+}
+h1,h2{
+  font-family: $font-primary;
+}
+h3,h4,h5,h6,p, a, div, *{
+  font-family: $font-secondary;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.hidden{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: unset;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title{
+  h2{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: $color-blue;
+    &::before{
+      content: '';
+      display: block;
+      width: 2em;
+      height: 0.2em;
+      position: relative;
+      top: 1em;
+      left: -2.2em;
+      background-color: $color-green;
+    }
+  }
+}
+
+.default-btn{
+  display: block;
+  margin: 2em auto;
+  width: fit-content;
+  padding: 0.2em 2em;
+  background-color: $color-blue;
+  color: $color-white;
+  border-radius: 7px;
+}
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+  .section-title h2{
+    &::before{
+      left: -2.4em;
+    }
+  }
+}

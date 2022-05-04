@@ -1,0 +1,16 @@
+{
+  "name": "rf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "sass": "^1.51.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "b-css": "sass _partials assets/css",
+    "w-css": "sass --watch _partials assets/css"
+  },
+  "author": "Marcos Paulo, marcosazevedo2112@gmail.com"
+}
