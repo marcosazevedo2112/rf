@@ -5,15 +5,6 @@ header {
 
   .desktop {
     display: none;
-
-    a {
-      transition: 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
-
-      &:hover {
-        color: $color-green;
-        transform: scale(1.1);
-      }
-    }
   }
 
   .mobile {
@@ -59,15 +50,18 @@ header {
       left: 100%;
       transition: 500ms ease-in-out;
       transition-property: left;
-      .menu-close{
+
+      .menu-close {
         float: right;
         margin-right: 1.5em;
         margin-top: 1.5em;
         transform: scale(1.25);
-        g line{
+
+        g line {
           stroke: $color-white;
         }
       }
+
       a {
         display: block;
         color: $color-white;
@@ -90,7 +84,8 @@ header {
           color: $color-green;
         }
       }
-      &.active{
+
+      &.active {
         left: 0;
       }
     }
@@ -128,40 +123,82 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @include media-breakpoint-up(lg) {
   header {
-    position: sticky;
-    height: 15vh;
+    width: 100%;
+    position: fixed;
+    height: fit-content;
     top: 0;
     z-index: 999;
+    background-color: transparent;
+
+    &.interna {
+      .desktop {
+        background-color: $color-blue;
+      }
+    }
 
     .mobile {
       display: none;
     }
 
     .desktop {
-      padding-right: 7em;
-      padding-left: 7em;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      height: fit-content;
+      display: block;
       color: $color-white;
       font-family: $font-primary;
+      text-align: center;
+      padding: 0;
+      width: 100%;
+      transition-property: background-color;
+      transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
-      a {
-        font-size: 0.9em;
+      &.active {
+        background-color: $color-blue;
       }
 
-      .logo {
-        svg {
-          width: 0em;
-          height: 8em;
-          transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-          transition-property: width;
-        }
+      ul {
+        height: fit-content;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-        &.active {
-          svg {
-            width: 4em;
+        li {
+          display: inline-block;
+          margin: 0 1em;
+          width: auto;
+          transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+          &.logo-header {
+            padding: 0;
+            width: fit-content;
+
+            svg {
+              width: 0em;
+              height: 5em;
+              transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+              transition-property: width;
+            }
+
+            &.active {
+              margin: 0 1em;
+
+              svg {
+                width: 4em;
+              }
+            }
+          }
+
+          &:first-of-type {
+            margin: 0;
+          }
+          a{
+            transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+          }
+
+          &:hover{
+            a {
+              color: $color-green;
+            }
           }
         }
       }
@@ -177,11 +214,10 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @include media-breakpoint-up(xl) {
   header {
-    height: 12vh;
-
     .desktop {
-      padding-right: 7em;
-      padding-left: 7em;
+      ul li {
+        margin: 0 1.6em;
+      }
     }
   }
 }
@@ -194,13 +230,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @include media-breakpoint-up(xxl) {
   header {
-    .desktop {
-      padding-right: 17em;
-      padding-left: 17em;
-
-      .logo.active svg {
-        width: 6em;
-      }
+    .desktop ul li {
+      margin: 0 2.5em;
     }
   }
 }

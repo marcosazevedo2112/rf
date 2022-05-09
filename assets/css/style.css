@@ -11201,13 +11201,6 @@ header {
 header .desktop {
   display: none;
 }
-header .desktop a {
-  transition: 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-header .desktop a:hover {
-  color: #8dc54b;
-  transform: scale(1.1);
-}
 header .mobile .bar {
   background-color: #114454;
   display: flex;
@@ -11300,35 +11293,70 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @media (min-width: 992px) {
   header {
-    position: sticky;
-    height: 15vh;
+    width: 100%;
+    position: fixed;
+    height: fit-content;
     top: 0;
     z-index: 999;
+    background-color: transparent;
+  }
+  header.interna .desktop {
+    background-color: #114454;
   }
   header .mobile {
     display: none;
   }
   header .desktop {
-    padding-right: 7em;
-    padding-left: 7em;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: fit-content;
+    display: block;
     color: #ffffff;
     font-family: "Oxygen", sans-serif;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    transition-property: background-color;
+    transition: 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
   }
-  header .desktop a {
-    font-size: 0.9em;
+  header .desktop.active {
+    background-color: #114454;
   }
-  header .desktop .logo svg {
+  header .desktop ul {
+    height: fit-content;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  header .desktop ul li {
+    display: inline-block;
+    margin: 0 1em;
+    width: auto;
+    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  header .desktop ul li.logo-header {
+    padding: 0;
+    width: fit-content;
+  }
+  header .desktop ul li.logo-header svg {
     width: 0em;
-    height: 8em;
+    height: 5em;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition-property: width;
   }
-  header .desktop .logo.active svg {
+  header .desktop ul li.logo-header.active {
+    margin: 0 1em;
+  }
+  header .desktop ul li.logo-header.active svg {
     width: 4em;
+  }
+  header .desktop ul li:first-of-type {
+    margin: 0;
+  }
+  header .desktop ul li a {
+    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  header .desktop ul li:hover a {
+    color: #8dc54b;
   }
 }
 /*
@@ -11338,12 +11366,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 1200px) {
-  header {
-    height: 12vh;
-  }
-  header .desktop {
-    padding-right: 7em;
-    padding-left: 7em;
+  header .desktop ul li {
+    margin: 0 1.6em;
   }
 }
 /*
@@ -11353,12 +11377,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 1400px) {
-  header .desktop {
-    padding-right: 17em;
-    padding-left: 17em;
-  }
-  header .desktop .logo.active svg {
-    width: 6em;
+  header .desktop ul li {
+    margin: 0 2.5em;
   }
 }
 footer {
@@ -11424,29 +11444,32 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 .homepage .banner {
   margin: 0;
   background-image: url("../images/banner/banner.png");
-  height: 93vh;
+  height: 100vh;
   width: 100%;
   background-size: cover;
+  position: relative;
+}
+.homepage .banner .wrapper {
+  padding-top: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
-.homepage .banner .logo {
+.homepage .banner .wrapper .logo {
   width: 85%;
   height: auto;
 }
-.homepage .banner .redes-sociais {
+.homepage .banner .wrapper .redes-sociais {
   display: none;
 }
-.homepage .banner .seta {
+.homepage .banner .wrapper .seta {
   position: absolute;
   bottom: 1em;
   animation-name: upAndDown;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-.homepage .banner .seta img {
+.homepage .banner .wrapper .seta img {
   height: 3em;
 }
 .homepage .sobre {
@@ -11471,8 +11494,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   margin-left: -1em;
 }
 .homepage .atuacao {
+  padding-bottom: 2em;
   background-color: #f5f5f6;
-  padding: 2em 1em;
 }
 .homepage .atuacao .itens {
   margin-top: 5em;
@@ -11511,8 +11534,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   margin-bottom: 0;
 }
 .homepage .contato {
+  padding-bottom: 2em;
   background-color: #d1d2d4;
-  padding: 2em 1em;
 }
 .homepage .contato p {
   margin-top: 2em;
@@ -11559,6 +11582,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   width: fit-content;
   border: none;
 }
+.homepage .section-title {
+  padding-top: 2em;
+}
 
 /*
 =====================================================
@@ -11568,9 +11594,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @media (min-width: 768px) {
   .homepage .banner {
-    height: 93vh;
+    height: 100vh;
   }
-  .homepage .banner .logo {
+  .homepage .banner .wrapper .logo {
     width: 70%;
   }
   .homepage .sobre {
@@ -11589,10 +11615,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     margin-right: -2em;
     margin-left: -2em;
   }
-  .homepage .atuacao {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
   .homepage .atuacao .itens {
     flex-direction: row;
     flex-wrap: wrap;
@@ -11605,9 +11627,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .homepage .atuacao .itens .item:last-of-type {
     margin-bottom: 4em;
   }
-  .homepage .contato {
-    padding: 2em 2em;
-  }
 }
 /*
 =====================================================
@@ -11617,9 +11636,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @media (min-width: 992px) {
   .homepage .banner {
-    height: 85vh;
+    height: 100vh;
   }
-  .homepage .banner .logo {
+  .homepage .banner .wrapper .logo {
     width: 50%;
   }
   .homepage .banner .redes-sociais {
@@ -11657,9 +11676,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     width: 40vw;
     object-fit: cover;
   }
-  .homepage .atuacao {
-    padding: 3em 7em;
-  }
   .homepage .atuacao .itens {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -11676,9 +11692,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   }
   .homepage .atuacao .itens .item .item-logo {
     height: 5em;
-  }
-  .homepage .contato {
-    padding: 3em 7em;
   }
   .homepage .contato p {
     margin-top: 3em;
@@ -11699,11 +11712,6 @@ Extra Large devices (desktops, 1200px and up)
 Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
-@media (min-width: 1200px) {
-  .homepage .banner {
-    height: 88vh;
-  }
-}
 /*
 =====================================================
 Extra Extra Large devices (desktops, 1400px and up)
@@ -11716,21 +11724,15 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     height: min-content;
   }
   .homepage .sobre .texto {
-    padding-left: 12em;
+    padding-left: 15em;
   }
   .homepage .sobre img {
     display: block;
     max-width: 40%;
     object-fit: cover;
   }
-  .homepage .atuacao {
-    padding: 3em 16em;
-  }
   .homepage .atuacao .itens .item p {
     width: 70%;
-  }
-  .homepage .contato {
-    padding: 3em 16em;
   }
 }
 

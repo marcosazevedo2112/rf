@@ -16,32 +16,35 @@
   .banner {
     margin: 0;
     background-image: url("../images/banner/banner.png");
-    height: 93vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 
-    .logo {
-      width: 85%;
-      height: auto;
-    }
-
-    .redes-sociais{
-      display: none;
-    }
-
-    .seta {
-      position: absolute;
-      bottom: 1em;
-      animation-name: upAndDown;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-
-      img {
-        height: 3em;
+    .wrapper{
+      padding-top: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .logo {
+        width: 85%;
+        height: auto;
+      }
+  
+      .redes-sociais{
+        display: none;
+      }
+  
+      .seta {
+        position: absolute;
+        bottom: 1em;
+        animation-name: upAndDown;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+  
+        img {
+          height: 3em;
+        }
       }
     }
   }
@@ -72,8 +75,8 @@
     }
   }
   .atuacao{
+    padding-bottom: 2em;
     background-color: $color-grey;
-    padding: 2em 1em;
     .itens{
       margin-top: 5em;
       width: 100%;
@@ -114,8 +117,8 @@
     }
   }
   .contato{
+    padding-bottom: 2em;
     background-color: $color-dark-grey;
-    padding: 2em 1em;
     p{
       margin-top: 2em;
     }
@@ -164,6 +167,9 @@
       }
     }
   }
+  .section-title{
+    padding-top: 2em;
+  }
 }
 
 /*
@@ -175,9 +181,11 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 @include media-breakpoint-up(md) {
   .homepage {
     .banner {
-      height: 93vh;
-      .logo {
-        width: 70%;
+      height: 100vh;
+      .wrapper{
+        .logo {
+          width: 70%;
+        }
       }
     }
     .sobre{
@@ -197,8 +205,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       }
     }
     .atuacao{
-      padding-left: 2em;
-      padding-right: 2em;
       .itens{
         flex-direction: row;
         flex-wrap: wrap;
@@ -212,9 +218,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
         }
       }
     }
-    .contato{
-      padding: 2em 2em;
-    }
   }
 }
 
@@ -227,8 +230,8 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 @include media-breakpoint-up(lg) {
   .homepage{
     .banner{
-      height: 85vh;
-      .logo{
+      height: 100vh;
+      .wrapper .logo{
         width: 50%;
       }
       .redes-sociais{
@@ -268,7 +271,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       }
     }
     .atuacao{
-      padding: 3em 7em;
       .itens{
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -288,7 +290,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       }
     }
     .contato{
-      padding: 3em 7em;
       p{
         margin-top: 3em;
       }
@@ -312,11 +313,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @include media-breakpoint-up(xl) {
-  .homepage{
-    .banner{
-      height: 88vh;
-    }
-  }
 }
 
 /*
@@ -331,7 +327,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       max-height: fit-content;
       height: min-content;
       .texto{
-        padding-left: 12em;
+        padding-left: 15em;
       }
       img{
         display: block;
@@ -340,15 +336,11 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       }
     }
     .atuacao{
-      padding: 3em 16em;
       .itens .item{
         p{
           width: 70%;
         }
       }
-    }
-    .contato{
-      padding: 3em 16em;
     }
   }
 }
