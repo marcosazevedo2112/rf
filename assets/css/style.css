@@ -6,7 +6,7 @@
 
   ###############################################
 */
-@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto+Condensed:wght@400;700&display=swap");
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11131,7 +11131,7 @@ html {
 }
 
 h1, .h1, h2, .h2 {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, div, * {
@@ -11156,7 +11156,7 @@ a {
 
 .section-title h2, .section-title .h2 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   color: #114454;
@@ -11310,7 +11310,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     height: fit-content;
     display: block;
     color: #ffffff;
-    font-family: "Oxygen", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     text-align: center;
     padding: 0;
     width: 100%;
@@ -11724,6 +11724,9 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .homepage .atuacao .itens .item p {
     width: 70%;
   }
+}
+.page-interna {
+  height: 300vh;
 }
 
 /*# sourceMappingURL=style.css.map */
