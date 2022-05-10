@@ -21,27 +21,28 @@
     background-size: cover;
     position: relative;
 
-    .wrapper{
+    .wrapper {
       padding-top: 30vh;
       display: flex;
       align-items: center;
       justify-content: center;
+
       .logo {
         width: 85%;
         height: auto;
       }
-  
-      .redes-sociais{
+
+      .redes-sociais {
         display: none;
       }
-  
+
       .seta {
         position: absolute;
         bottom: 1em;
         animation-name: upAndDown;
         animation-duration: 3s;
         animation-iteration-count: infinite;
-  
+
         img {
           height: 3em;
         }
@@ -50,114 +51,138 @@
   }
 
   .sobre {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column-reverse;
+    position: relative;
 
-    .texto {
-      font-size: 1.2em;
+    .container {
+      .sobre-image {
+        position: absolute;
+        top: 0;
+        left: 0;
 
-      .section-title {
-        padding-top: 2em;
-        padding-bottom: 2em;
+        width: 100vw;
+        height: 50vh;
 
+        object-fit: cover;
+        object-position: top center;
+        margin: 0;
       }
-      p{
-        padding-bottom: 1em;
-      }
-    }
 
-    img {
-      width: 100vw;
-      margin-right: -1em;
-      margin-left: -1em;
+      .texto {
+        padding-top: 50vh;
+
+        .default-btn {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
     }
   }
-  .atuacao{
+
+  .atuacao {
     padding-bottom: 2em;
     background-color: $color-grey;
-    .itens{
+
+    .itens {
       margin-top: 5em;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .item{
+
+      .item {
         margin-bottom: 4em;
         width: 80%;
         text-align: center;
-        .item-logo{
+
+        .item-logo {
           height: 7em;
           margin-bottom: 1em;
         }
-        h4{
+
+        h4 {
           font-weight: bold;
           margin-bottom: 1em;
         }
-        a{
+
+        a {
           color: $color-blue;
-          img{
+
+          img {
             width: 0.5em;
             margin-left: 0.2em;
             transition: 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
             transition-property: margin-left;
           }
-          &:hover{
-           img{
-             margin-left: .5em;
-           }   
+
+          &:hover {
+            img {
+              margin-left: .5em;
+            }
           }
         }
-        &:last-of-type{
+
+        &:last-of-type {
           margin-bottom: 0;
         }
       }
     }
   }
-  .contato{
+
+  .contato {
     padding-bottom: 2em;
     background-color: $color-dark-grey;
-    p{
+
+    p {
       margin-top: 2em;
     }
-    .wrapper{
-      .redes-sociais{
+
+    .wrapper {
+      .redes-sociais {
         margin-top: 3em;
         display: flex;
         flex-direction: column;
-        a{
+
+        a {
           max-width: 100%;
           width: fit-content;
           text-overflow: ellipsis;
           overflow: hidden;
           margin-bottom: 1em;
-          &:hover, &:active{
+
+          &:hover,
+          &:active {
             color: $color-blue;
           }
-          &:last-of-type{
+
+          &:last-of-type {
             margin-bottom: 0;
           }
         }
       }
-      form{
+
+      form {
         margin-top: 3em;
         width: 100%;
-        input, textarea{
+
+        input,
+        textarea {
           width: 100%;
           margin-bottom: 1em;
           background-color: transparent;
           border: 1px solid $color-green;
           padding: .2em .4em;
-          &::placeholder{
+
+          &::placeholder {
             color: $color-blue;
           }
         }
-        textarea{
+
+        textarea {
           height: 10em;
         }
-        button{
+
+        button {
           margin: 0;
           margin-left: auto;
           display: block;
@@ -167,7 +192,8 @@
       }
     }
   }
-  .section-title{
+
+  .section-title {
     padding-top: 2em;
   }
 }
@@ -182,37 +208,47 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .homepage {
     .banner {
       height: 100vh;
-      .wrapper{
+
+      .wrapper {
         .logo {
           width: 70%;
         }
       }
     }
-    .sobre{
-      margin: 0;
-      padding-left: 2em;
-      padding-right: 2em;
-      .texto{
-        font-size: 1.45;
+
+    .sobre {
+      position: relative;
+
+      .container {
+        .sobre-image {
+          height: 70vh;
+        }
+        .texto {
+          padding-top: 72vh;
+  
+          .section-title {
+            margin-bottom: 1.5em;
+          }
+  
+          p {
+            margin-bottom: 1.5em;
+          }
+        }
       }
-      img{
-        width: 100vw;
-        height: 70vh;
-        object-fit: cover;
-        object-position: center top;
-        margin-right: -2em;
-        margin-left: -2em;
-      }
+
     }
-    .atuacao{
-      .itens{
+
+    .atuacao {
+      .itens {
         flex-direction: row;
         flex-wrap: wrap;
-        .item{
+
+        .item {
           width: 40vw;
           padding: 0 1em;
           margin-bottom: 4em;
-          &:last-of-type{
+
+          &:last-of-type {
             margin-bottom: 4em;
           }
         }
@@ -228,54 +264,66 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @include media-breakpoint-up(lg) {
-  .homepage{
-    .banner{
+  .homepage {
+    .banner {
       height: 100vh;
-      .wrapper .logo{
+
+      .wrapper .logo {
         width: 50%;
       }
-      .redes-sociais{
+
+      .redes-sociais {
         display: block;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
         right: 2em;
-        a{
+
+        a {
           margin: 3em 0;
-          img{
+
+          img {
             height: 1.5em;
           }
         }
       }
     }
-    .sobre{
-      max-height: fit-content;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch;
-      .texto{
-        padding-left: 5em;
-        .default-btn{
-          margin-left: 0;
+
+    .sobre {
+      position: relative;
+
+      .container {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .sobre-image {
+          position: absolute;
+          left: unset;
+          right: 0;
+          height: 100%;
+          width: 45vw;
+          object-fit: cover;
         }
-        .section-title{
-          padding-bottom: 4em;
+
+        .texto {
+          padding-top: 0;
+          padding-bottom: 10vh;
+          padding-right: 45vw;
+          .default-btn{
+            margin-left: 0;
+          }
         }
-      }
-      img{
-        padding-left: 3em;
-        height: auto;
-        width: 40vw;
-        object-fit: cover;
       }
     }
-    .atuacao{
-      .itens{
+
+    .atuacao {
+      .itens {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: flex-end;
-        .item{
+
+        .item {
           width: 30vw;
           min-height: 17em;
           max-height: 20em;
@@ -283,21 +331,25 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
           flex-direction: column;
           align-items: center;
           justify-content: space-between;
-          .item-logo{
+
+          .item-logo {
             height: 5em;
           }
         }
       }
     }
-    .contato{
-      p{
+
+    .contato {
+      p {
         margin-top: 3em;
       }
-      .wrapper{
+
+      .wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .redes-sociais{
+
+        .redes-sociais {
           width: 40%;
           margin-right: 20%;
         }
@@ -312,8 +364,7 @@ Extra Large devices (desktops, 1200px and up)
 Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
-@include media-breakpoint-up(xl) {
-}
+@include media-breakpoint-up(xl) {}
 
 /*
 =====================================================
@@ -322,22 +373,10 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @include media-breakpoint-up(xxl) {
-  .homepage{
-    .sobre{
-      max-height: fit-content;
-      height: min-content;
-      .texto{
-        padding-left: 15em;
-      }
-      img{
-        display: block;
-        max-width: 40%;
-        object-fit: cover;
-      }
-    }
-    .atuacao{
-      .itens .item{
-        p{
+  .homepage {
+    .atuacao {
+      .itens .item {
+        p {
           width: 70%;
         }
       }

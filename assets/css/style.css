@@ -11473,25 +11473,24 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   height: 3em;
 }
 .homepage .sobre {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  flex-direction: column-reverse;
+  position: relative;
 }
-.homepage .sobre .texto {
-  font-size: 1.2em;
-}
-.homepage .sobre .texto .section-title {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.homepage .sobre .texto p {
-  padding-bottom: 1em;
-}
-.homepage .sobre img {
+.homepage .sobre .container .sobre-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
-  margin-right: -1em;
-  margin-left: -1em;
+  height: 50vh;
+  object-fit: cover;
+  object-position: top center;
+  margin: 0;
+}
+.homepage .sobre .container .texto {
+  padding-top: 50vh;
+}
+.homepage .sobre .container .texto .default-btn {
+  margin-right: auto;
+  margin-left: auto;
 }
 .homepage .atuacao {
   padding-bottom: 2em;
@@ -11562,14 +11561,16 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   margin-top: 3em;
   width: 100%;
 }
-.homepage .contato .wrapper form input, .homepage .contato .wrapper form textarea {
+.homepage .contato .wrapper form input,
+.homepage .contato .wrapper form textarea {
   width: 100%;
   margin-bottom: 1em;
   background-color: transparent;
   border: 1px solid #8dc54b;
   padding: 0.2em 0.4em;
 }
-.homepage .contato .wrapper form input::placeholder, .homepage .contato .wrapper form textarea::placeholder {
+.homepage .contato .wrapper form input::placeholder,
+.homepage .contato .wrapper form textarea::placeholder {
   color: #114454;
 }
 .homepage .contato .wrapper form textarea {
@@ -11600,20 +11601,19 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     width: 70%;
   }
   .homepage .sobre {
-    margin: 0;
-    padding-left: 2em;
-    padding-right: 2em;
+    position: relative;
   }
-  .homepage .sobre .texto {
-    font-size: 1.45;
-  }
-  .homepage .sobre img {
-    width: 100vw;
+  .homepage .sobre .container .sobre-image {
     height: 70vh;
-    object-fit: cover;
-    object-position: center top;
-    margin-right: -2em;
-    margin-left: -2em;
+  }
+  .homepage .sobre .container .texto {
+    padding-top: 72vh;
+  }
+  .homepage .sobre .container .texto .section-title {
+    margin-bottom: 1.5em;
+  }
+  .homepage .sobre .container .texto p {
+    margin-bottom: 1.5em;
   }
   .homepage .atuacao .itens {
     flex-direction: row;
@@ -11656,25 +11656,27 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     height: 1.5em;
   }
   .homepage .sobre {
-    max-height: fit-content;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    position: relative;
   }
-  .homepage .sobre .texto {
-    padding-left: 5em;
+  .homepage .sobre .container {
+    display: flex;
+    flex-direction: row-reverse;
   }
-  .homepage .sobre .texto .default-btn {
-    margin-left: 0;
-  }
-  .homepage .sobre .texto .section-title {
-    padding-bottom: 4em;
-  }
-  .homepage .sobre img {
-    padding-left: 3em;
-    height: auto;
-    width: 40vw;
+  .homepage .sobre .container .sobre-image {
+    position: absolute;
+    left: unset;
+    right: 0;
+    height: 100%;
+    width: 45vw;
     object-fit: cover;
+  }
+  .homepage .sobre .container .texto {
+    padding-top: 0;
+    padding-bottom: 10vh;
+    padding-right: 45vw;
+  }
+  .homepage .sobre .container .texto .default-btn {
+    margin-left: 0;
   }
   .homepage .atuacao .itens {
     flex-wrap: nowrap;
@@ -11719,18 +11721,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 1400px) {
-  .homepage .sobre {
-    max-height: fit-content;
-    height: min-content;
-  }
-  .homepage .sobre .texto {
-    padding-left: 15em;
-  }
-  .homepage .sobre img {
-    display: block;
-    max-width: 40%;
-    object-fit: cover;
-  }
   .homepage .atuacao .itens .item p {
     width: 70%;
   }
