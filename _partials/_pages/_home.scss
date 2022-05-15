@@ -129,70 +129,6 @@
     }
   }
 
-  .contato {
-    padding-bottom: 2em;
-    background-color: $color-dark-grey;
-
-    p {
-      margin-top: 2em;
-    }
-
-    .wrapper {
-      .redes-sociais {
-        margin-top: 3em;
-        display: flex;
-        flex-direction: column;
-
-        a {
-          max-width: 100%;
-          width: fit-content;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          margin-bottom: 1em;
-
-          &:hover,
-          &:active {
-            color: $color-blue;
-          }
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
-      }
-
-      form {
-        margin-top: 3em;
-        width: 100%;
-
-        input,
-        textarea {
-          width: 100%;
-          margin-bottom: 1em;
-          background-color: transparent;
-          border: 1px solid $color-green;
-          padding: .2em .4em;
-
-          &::placeholder {
-            color: $color-blue;
-          }
-        }
-
-        textarea {
-          height: 10em;
-        }
-
-        button {
-          margin: 0;
-          margin-left: auto;
-          display: block;
-          width: fit-content;
-          border: none;
-        }
-      }
-    }
-  }
-
   .section-title {
     padding-top: 2em;
   }
@@ -335,23 +271,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
           .item-logo {
             height: 5em;
           }
-        }
-      }
-    }
-
-    .contato {
-      p {
-        margin-top: 3em;
-      }
-
-      .wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .redes-sociais {
-          width: 40%;
-          margin-right: 20%;
         }
       }
     }

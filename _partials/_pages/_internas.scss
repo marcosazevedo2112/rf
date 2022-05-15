@@ -1,3 +1,219 @@
-.page-interna{
-  height: 300vh;
+.page-interna {
+  .videos {
+    padding-top: 3em;
+
+    .row .video-item {
+      margin: 1em 0;
+
+      a img {
+        display: block;
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        object-position: top center;
+        //TODO: add video thumbnail and img play button
+      }
+
+      .data {
+        color: grey;
+        font-size: 0.9em;
+        margin: 1em 0;
+      }
+
+      h3 {
+        font-size: 1.1em;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .noticias {
+    padding-top: 3em;
+
+    .noticias-lista {
+      .noticia-item {
+        height: fit-content;
+        width: 100%;
+        border-bottom: 2px solid $color-blue;
+        padding: 3em 0;
+
+        img {
+          width: 100%;
+          height: 30vh;
+          object-fit: cover;
+          object-position: top center;
+        }
+
+        .texto {
+          .data {
+            margin: 1em 0;
+            font-size: 0.9em;
+            color: $color-blue;
+          }
+
+          h3 {
+            font-weight: bold;
+          }
+
+          .default-btn {
+            margin: 0 auto;
+          }
+        }
+
+        &:last-of-type {
+          padding-bottom: 0;
+          border: none;
+          margin-bottom: 3em;
+        }
+      }
+    }
+  }
+
+  .fotos {
+    padding-top: 3em;
+    .grid-fotos{
+      padding-top: 3em;
+      padding-bottom: 4em;
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-auto-rows: 150px;
+      grid-auto-flow: dense;
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.big{
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+        &.tall{
+          grid-row: span 2;
+        }
+        &.wide{
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Medium devices (desktops, 768px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(md) {
+  .page-interna {
+    .videos .container {
+      .section-title {
+        margin-bottom: 1.5em;
+      }
+
+      .row .video-item {
+        a img {
+          height: calc(720px / 3.333);
+        }
+      }
+    }
+
+    .noticias {
+      .noticias-lista .noticia-item {
+        max-height: 50vh;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        height: fit-content;
+
+        img {
+          width: 40%;
+          height: auto;
+          max-height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+
+        .texto {
+          padding-left: 1em;
+
+          h3 {
+            margin-bottom: 1em;
+          }
+
+          .default-btn {
+            margin-left: 0;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+
+    .fotos{
+      .grid-msnry {
+        .grid-item{
+          margin: 0.5em;
+          width: 30%;
+          img{
+            width: 100%;
+          }
+          &.width-2{
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+=====================================================
+Large devices (desktops, 992px and up)
+Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+=====================================================
+*/
+@include media-breakpoint-up(lg) {
+  .page-interna {
+    //Para compensar o tamanho do header(80px) 
+    //que tem pos. fixed no desktop
+    padding-top: 80px;
+
+    .noticias .noticias-lista .noticia-item {
+      .texto {
+        padding-left: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h3 {
+          margin-bottom: 0;
+        }
+
+        p {
+          font-size: 1.1em;
+        }
+      }
+
+      &:not(.noticia-image) {
+        .texto {
+          h3 {
+            margin-bottom: 1em;
+          }
+
+          .default-btn {
+            margin-top: 2em;
+          }
+        }
+      }
+    }
+  }
 }

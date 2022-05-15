@@ -9,8 +9,9 @@
 // Variaveis
 @import "../../_partials/variables.scss";
 
-// Bootstrap
+//FrameWorks, plugins e etc
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
 
 // Globals
 @import "../../_partials/globals.scss";

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="node_modules/lity/dist/lity.min.css">
 </head>
+
 <body class="page-interna">
   <header class="interna">
     <div class="desktop">
       <ul class="nav-menu">
         <li class="logo-header">
-          <a href=""><svg xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" width="286" height="178" viewBox="0 0 286 178">
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="286"
+              height="178" viewBox="0 0 286 178">
               <image id="_Grupo_Grupo_" data-name="&lt;Grupo&gt; + &lt;Grupo&gt;" width="286" height="178"
-                xlink:href="data:img/png;base64,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" /></svg></a></li>
+                xlink:href="data:img/png;base64,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" />
+            </svg></a>
+        </li>
         <li><a class="" href="">SOBRE</a></li>
         <li><a class="" href="">ATIVIDADES DOSCENTES</a></li>
         <li><a class="" href="">PUBLICAÇÕES</a></li>
@@ -64,7 +69,213 @@
       </div>
     </div>
   </header>
+  <main>
+    <section class="videos">
+      <div class="container">
+        <div class="section-title">
+          <h2>Vídeos</h2>
+        </div>
+        <div class="row">
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/internas/videos/thumb-1.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/foto-perfil.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/internas/videos/thumb-1.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/internas/videos/thumb-1.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/internas/videos/thumb-1.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+          <div class="video-item col-md-4">
+            <a href="https://www.youtube.com/watch?v=Jn6-TItCazo" data-lity class="thumb" href="">
+              <img src="assets/images/internas/videos/thumb-1.png" alt="">
+            </a>
+            <h5 class="data">11/05/2022</h4>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="noticias">
+      <div class="container">
+        <div class="section-title">
+          <h2>Prêmios, Certificações e Condecorações</h2>
+        </div>
+        <div class="noticias-lista">
+          <div class="noticia-item noticia-image">
+            <img src="assets/images/internas/noticias/imagem-1.png" alt="">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                <div class="btn-wrapper">
+                  <a href="" class="default-btn">Leia Mais</a>
+                </div>
+            </div>
+          </div>
+          <div class="noticia-item noticia-image">
+            <img src="assets/images/foto-perfil.png" alt="">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                  <a href="" class="default-btn">Leia Mais</a>
+            </div>
+          </div>
+          <div class="noticia-item noticia-image">
+            <img src="assets/images/internas/noticias/imagem-1.png" alt="">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                <div class="btn-wrapper">
+                  <a href="" class="default-btn">Leia Mais</a>
+                </div>
+            </div>
+          </div>
+          <div class="noticia-item">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                <div class="btn-wrapper">
+                  <a href="" class="default-btn">Leia Mais</a>
+                </div>
+            </div>
+          </div>
+          <div class="noticia-item">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                <div class="btn-wrapper">
+                  <a href="" class="default-btn">Leia Mais</a>
+                </div>
+            </div>
+          </div>
+          <div class="noticia-item">
+            <div class="texto">
+              <h5 class="data">11/05/2022</h4>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ex modi recusandae minus?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, accusantium, blanditiis sequi iste
+                  temporibus quas architecto, illo repellendus suscipit ex numquam rerum accusamus cupiditate doloremque
+                  nesciunt aut nisi enim dolores!</p>
+                <div class="btn-wrapper">
+                  <a href="" class="default-btn">Leia Mais</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fotos">
+      <div class="container">
+        <div class="section-title">
+          <h2>Fotos</h2>
+        </div>
+        <div class="grid-fotos">
+          <div class=""><img src="assets/images/internas/masonry/25-Awosome-Nature-Wallpapers-24.jpg" alt=""></div>
+          <div class="big"><img src="assets/images/internas/masonry/7702_Sea-view-near-a-fence.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/corona_del_mar_newport_beach-1920x1080.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/Hipster wallpaper.jpg" alt=""></div>
+          <div class="tall"><img src="assets/images/internas/masonry/Lake wallpaper.jpg" alt=""></div>
+          <div class="tall"><img src="assets/images/internas/masonry/25-Awosome-Nature-Wallpapers-24.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/7702_Sea-view-near-a-fence.jpg" alt=""></div>
+          <div class="wide"><img src="assets/images/internas/masonry/corona_del_mar_newport_beach-1920x1080.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/Hipster wallpaper.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/Lake wallpaper.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/25-Awosome-Nature-Wallpapers-24.jpg" alt=""></div>
+          <div class=""><img src="assets/images/internas/masonry/7702_Sea-view-near-a-fence.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <section class="contato">
+      <div class="container">
+        <div class="section-title">
+          <h2>Entre em contato</h2>
+        </div>
+        <p>Visite minhas redes sociais e utilize o formulário para enviar uma mensagem</p>
+        <div class="wrapper">
+          <div class="redes-sociais">
+            <a href="">
+              @Rodrigofontenelle
+            </a>
+            <a href="">
+              @RodrigofonteMG
+            </a>
+            <a href="https://www.linkedin.com/in/rodrigofontenelle/">
+              https://www.linkedin.com/in/rodrigofontenelle/
+            </a>
+            <a href="">
+              fontenelle.auditoria@gmail.com
+            </a>
+          </div>
+          <form id="form-contato" action="">
+            <input required type="text" placeholder="Nome">
+            <input required type="email" placeholder="E-mail">
+            <input required type="text" placeholder="Assunto">
+            <textarea required name="" id="" placeholder="Mensagem"></textarea>
+            <button class="default-btn" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="">Politica de Privacidade</a>
+    <img src="assets/images/logo-h.png" alt="">
+  </footer>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/lity/dist/lity.min.js"></script>
+  <script src="node_modules/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
   <script src="assets/js/scroll.js"></script>
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/fancyBoxGallery.js"></script>
 </body>
+
 </html>

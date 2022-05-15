@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@fancyapps/ui@^4.0.27":
+  version "4.0.27"
+  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-4.0.27.tgz#0b34e508c45b7d9e414e602d130052628124eb10"
+  integrity sha512-IpLREaLVhLGxcYeloCHrSuuPErRP4oEiLDgztZZMcBaKM4NnvRifw7MbU8unDKX+KCL+Ai9mEtH6J17zQ8FEig==
+
 anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
@@ -89,6 +94,16 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+
+jquery@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
+
+lity@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/lity/-/lity-2.4.1.tgz#23083296db934fd76346f1b565d25d0a0168a551"
+  integrity sha512-SVCYf+urp9tgGITi8RIJlzl6cMH6/gl16vkwOscLzN+5I1+/vxYbypbWMeHmbYCwGflq35bcvtzh6RxROWjSTw==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"

@@ -12,5 +12,10 @@
     "b-css": "sass _partials assets/css",
     "w-css": "sass --watch _partials assets/css"
   },
-  "author": "Marcos Paulo, marcosazevedo2112@gmail.com"
+  "author": "Marcos Paulo, marcosazevedo2112@gmail.com",
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.27",
+    "jquery": "^3.6.0",
+    "lity": "^2.4.1"
+  }
 }
